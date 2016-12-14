@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.krp.android.servicesdemo">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".InboundService"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name=".SystemEnabledService"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name=".IPCAIDLService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":exported_service" />
+        <service
+            android:name=".LocalBindService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <activity
+            android:name=".LocalBindServiceActivity"
+            android:label="@string/title_activity_local_bind_service"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <service
+            android:name=".IPCMessengerService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":IPC_Messenger_Service" />
+
+        <activity
+            android:name=".LocalMessengerServiceActivity"
+            android:label="@string/title_activity_local_messenger_service"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".IPCAIDLServiceActivity"
+            android:label="@string/title_activity_ipcaidlservice"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+    </application>
+
+</manifest>

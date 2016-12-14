@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">ServicesDemo</string>
+    <string name="title_activity_local_bind_service">LocalBindServiceActivity</string>
+    <string name="title_activity_local_messenger_service">LocalMessengerServiceActivity</string>
+    <string name="title_activity_ipcaidlservice">IPCAIDLServiceActivity</string>
+</resources>
